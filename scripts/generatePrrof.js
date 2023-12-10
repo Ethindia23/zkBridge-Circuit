@@ -18,8 +18,9 @@ const depositProofGenerator = async (input) => {
   const r = await depositWC.calculateWitness(input, 0);
   const commitment = r[1];
   const nullifierHash = r[2];
-  console.log(commitment);
-  console.log(nullifierHash);
+  console.log(commitment)
+  console.log(commitment.toString());
+  console.log(nullifierHash.toString());
 };
 const main = async () => {
   const secret = BNToBinary(
